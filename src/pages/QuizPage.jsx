@@ -1,40 +1,40 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { saveQuizScore } from '../utils/storage';
-
-const contohSoal = [
-  {
-    id: 1,
-    soal: "Apa itu variabel dalam pemrograman?",
-    pilihan: [
-      "Tempat menyimpan data sementara",
-      "Perintah untuk mencetak output",
-      "Jenis tipe data",
-      "Fungsi bawaan bahasa pemrograman"
-    ],
-    jawaban: 0,
-    penjelasan: "Variabel adalah tempat penyimpanan data sementara di memori yang nilainya dapat berubah selama program berjalan."
-  },
-  {
-    id: 2,
-    soal: "Manakah yang merupakan tipe data integer?",
-    pilihan: ["3.14", "'Hello'", "42", "True"],
-    jawaban: 2,
-    penjelasan: "Integer adalah tipe data bilangan bulat. 42 adalah contoh integer, sedangkan 3.14 adalah float, 'Hello' adalah string, dan True adalah boolean."
-  }
-];
+import { generateQuiz } from '../utils/generateQuiz';
+import { courses } from '../data/courses';
 
 export default function QuizPage() {
   const { courseId, chapterId } = useParams();
   const navigate = useNavigate();
+  const [soalList, setSoalList] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState(null);
   const [showExplain, setShowExplain] = useState(false);
   const [answers, setAnswers] = useState([]);
   const [finished, setFinished] = useState(false);
 
-  const soal = contohSoal[current];
-  const total = contohSoal.length;
+  const course = courses.find(c => c.id === courseId);
+  const chapter = course?.chapters.find(ch => ch.id === chapterId);
+
+  useEffect(() => {
+    async function fetchSoal() {
+      try {
+        const soal = await generateQuiz(course?.title, chapter?.title);
+        setSoalList(soal);
+      } catch (e) {
+        setError("Gagal generate soal. Coba lagi.");
+      } finally {
+        setLoading(false);
+      }
+    }
+    if (course && chapter) fetchSoal();
+  }, [courseId, chapterId]);
+
+  const soal = soalList[current];
+  const total = soalList.length;
 
   const handlePilih = (index) => {
     if (selected !== null) return;
@@ -45,7 +45,6 @@ export default function QuizPage() {
   const handleNext = () => {
     const newAnswers = [...answers, selected === soal.jawaban];
     setAnswers(newAnswers);
-
     if (current + 1 >= total) {
       const score = Math.round((newAnswers.filter(Boolean).length / total) * 100);
       saveQuizScore(courseId, chapterId, score);
@@ -56,6 +55,26 @@ export default function QuizPage() {
       setShowExplain(false);
     }
   };
+
+  if (loading) return (
+    <div className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center gap-4">
+      <div className="text-5xl animate-bounce">🧠</div>
+      <p className="text-gray-400">AI sedang membuat soal untuk kamu...</p>
+    </div>
+  );
+
+  if (error) return (
+    <div className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center gap-4">
+      <div className="text-5xl">😵</div>
+      <p className="text-red-400">{error}</p>
+      <button
+        onClick={() => window.location.reload()}
+        className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-xl"
+      >
+        Coba Lagi
+      </button>
+    </div>
+  );
 
   if (finished) {
     const score = Math.round((answers.filter(Boolean).length / total) * 100);
@@ -92,9 +111,10 @@ export default function QuizPage() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-white p-8 max-w-2xl mx-auto">
-      {/* Progress */}
+      {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <span className="text-gray-400 text-sm">{current + 1} / {total} soal</span>
+        <span className="text-gray-400 text-sm">{chapter?.title}</span>
       </div>
       <div className="w-full bg-gray-800 rounded-full h-2 mb-8">
         <div
@@ -125,7 +145,7 @@ export default function QuizPage() {
               onClick={() => handlePilih(index)}
               className={`${style} rounded-2xl p-4 text-left flex items-center gap-4 transition-colors`}
             >
-              <span className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-sm font-bold">
+              <span className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-sm font-bold shrink-0">
                 {String.fromCharCode(65 + index)}
               </span>
               {pilihan}
