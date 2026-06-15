@@ -2,8 +2,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 const navItems = [
   { icon: '🏠', path: '/', label: 'Home' },
-  { icon: '📚', path: '/courses', label: 'Mata Kuliah' },
-  { icon: '✏️', path: '/latihan', label: 'Latihan' },
   { icon: '🏆', path: '/trophy', label: 'Pencapaian' },
   { icon: '⚙️', path: '/settings', label: 'Pengaturan' },
 ];
@@ -11,6 +9,8 @@ const navItems = [
 export default function Sidebar() {
   const navigate = useNavigate();
   const location = useLocation();
+  const nama = localStorage.getItem('user-nama') || 'Putri Selly';
+  const inisial = nama.charAt(0).toUpperCase();
 
   return (
     <div className="fixed left-0 top-0 h-full w-16 bg-gray-900 flex flex-col items-center py-6 gap-6 z-50">
@@ -34,6 +34,11 @@ export default function Sidebar() {
           </button>
         );
       })}
+
+      {/* Avatar */}
+      <div className="mt-auto w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center font-bold text-sm">
+        {inisial}
+      </div>
     </div>
   );
 }
