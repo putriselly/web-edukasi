@@ -1,11 +1,18 @@
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { courses } from '../data/courses';
-import { getProgress, getQuizScores } from '../utils/storage';
+import { getProgress, getQuizScores, updateStreak } from '../utils/storage';
 
 export default function Home() {
   const navigate = useNavigate();
+  const [streak, setStreak] = useState(0);
   const progress = getProgress();
   const quizScores = getQuizScores();
+
+  useEffect(() => {
+    const s = updateStreak();
+    setStreak(s.days);
+  }, []);
 
   const totalSelesai = courses.filter(c => {
     const done = progress[c.id] || [];
@@ -43,7 +50,7 @@ export default function Home() {
         </div>
         <div className="bg-gray-800 rounded-2xl p-5">
           <div className="text-2xl mb-1">🔥</div>
-          <div className="text-3xl font-bold">0</div>
+          <div className="text-3xl font-bold">{streak}</div>
           <div className="text-gray-400 text-sm">Hari Belajar</div>
         </div>
       </div>
@@ -56,14 +63,27 @@ export default function Home() {
           const total = course.chapters.length;
           const pct = total > 0 ? Math.round((done.length / total) * 100) : 0;
 
+          let status = 'Belum Mulai';
+          let statusColor = 'bg-gray-600';
+          if (done.length > 0 && done.length < total) {
+            status = 'Sedang Berjalan';
+            statusColor = 'bg-blue-500';
+          } else if (done.length === total && total > 0) {
+            status = 'Selesai';
+            statusColor = 'bg-green-500';
+          }
+
           return (
             <div
               key={course.id}
               onClick={() => navigate(`/course/${course.id}`)}
               className="bg-gray-800 rounded-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform"
             >
-              <div className={`bg-gradient-to-r ${course.color} h-32 flex items-center justify-center text-5xl`}>
+              <div className={`bg-gradient-to-r ${course.color} h-32 flex items-center justify-center text-5xl relative`}>
                 {course.icon}
+                <span className={`absolute top-3 right-3 text-xs px-3 py-1 rounded-full text-white font-medium ${statusColor}`}>
+                  {status}
+                </span>
               </div>
               <div className="p-5">
                 <div className="text-xs text-gray-400 mb-1">Informatika</div>
