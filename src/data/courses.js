@@ -4,15 +4,20 @@ export const courses = [
       title: "Dasar-dasar Pemrograman",
       icon: "💻",
       color: "from-purple-500 to-purple-700",
+      kuis: [
+        { id: "kuis1", title: "Kuis 1", pdfUrl: "/soal/dasar-pemrograman/kuis1.pdf" },
+        { id: "kuis2", title: "Kuis 2", pdfUrl: "/soal/dasar-pemrograman/kuis2.pdf" },
+        { id: "uts", title: "UTS", pdfUrl: "/soal/dasar-pemrograman/soal-uts.pdf" },
+        { id: "uas", title: "UAS", pdfUrl: "/soal/dasar-pemrograman/soal-uas.pdf" },
+      ],
       chapters: [
-        { id: "pengenalan", title: "Pengenalan Pemrograman", duration: "30 min" },
-        { id: "tipe-data", title: "Tipe Data & Variabel", duration: "40 min" },
-        { id: "operator", title: "Operator", duration: "35 min" },
-        { id: "percabangan", title: "Percabangan", duration: "45 min" },
-        { id: "perulangan", title: "Perulangan", duration: "45 min" },
-        { id: "array", title: "Array", duration: "50 min" },
-        { id: "fungsi", title: "Fungsi & Prosedur", duration: "50 min" },
-        { id: "rekursi", title: "Rekursi", duration: "40 min" },
+        { id: "bab1", title: "Bab 1", pdfUrl: "/materi/dasar-pemrograman/materi-bab1.pdf", soalUrl: "/soal/dasar-pemrograman/soal-bab1.pdf" },
+        { id: "bab2", title: "Bab 2", pdfUrl: "/materi/dasar-pemrograman/materi-bab2.pdf", soalUrl: "/soal/dasar-pemrograman/soal-bab2.pdf" },
+        { id: "bab3", title: "Bab 3", pdfUrl: "/materi/dasar-pemrograman/materi-bab3.pdf", soalUrl: "/soal/dasar-pemrograman/soal-bab3.pdf" },
+        { id: "bab4", title: "Bab 4", pdfUrl: "/materi/dasar-pemrograman/materi-bab4.pdf", soalUrl: "/soal/dasar-pemrograman/soal-bab4.pdf" },
+        { id: "bab5", title: "Bab 5", pdfUrl: "/materi/dasar-pemrograman/materi-bab5.pdf", soalUrl: "/soal/dasar-pemrograman/soal-bab5.pdf" },
+        { id: "bab6", title: "Bab 6", pdfUrl: "/materi/dasar-pemrograman/materi-bab6.pdf", soalUrl: "/soal/dasar-pemrograman/soal-bab6.pdf" },
+        { id: "bab7", title: "Bab 7", pdfUrl: "/materi/dasar-pemrograman/materi-bab7.pdf", soalUrl: "/soal/dasar-pemrograman/soal-bab7.pdf" },
       ]
     },
     {

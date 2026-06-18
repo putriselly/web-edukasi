@@ -138,9 +138,19 @@ export default function ChapterPage() {
         )}
 
         {activeTab === 'contoh-soal' && (
-          <div className="text-center text-gray-400 py-16">
-            <div className="text-5xl mb-4">📝</div>
-            <p>Contoh soal belum tersedia untuk bab ini.</p>
+          <div className="bg-gray-800 rounded-2xl p-6">
+            {chapter.soalUrl ? (
+              <iframe
+                src={chapter.soalUrl}
+                className="w-full h-[600px] rounded-xl"
+                title="Contoh Soal PDF"
+              />
+            ) : (
+              <div className="text-center text-gray-400 py-16">
+                <div className="text-5xl mb-4">📝</div>
+                <p>Contoh soal belum tersedia untuk bab ini.</p>
+              </div>
+            )}
           </div>
         )}
 

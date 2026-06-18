@@ -43,7 +43,7 @@ export default function CoursePage() {
       </div>
 
       {/* Chapter List */}
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 mb-10">
         {course.chapters.length === 0 ? (
           <div className="bg-gray-800 rounded-2xl p-6 text-center text-gray-400">
             Belum ada bab untuk mata kuliah ini.
@@ -75,6 +75,25 @@ export default function CoursePage() {
           })
         )}
       </div>
+
+      {/* Kuis & Ujian */}
+      {course.kuis && course.kuis.length > 0 && (
+        <>
+          <h2 className="text-xl font-bold mb-4">Kuis & Ujian</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {course.kuis.map(item => (
+              <div
+                key={item.id}
+                onClick={() => navigate(`/course/${courseId}/ujian/${item.id}`)}
+                className="bg-gray-800 rounded-2xl p-5 text-center cursor-pointer hover:bg-gray-700 transition-colors"
+              >
+                <div className="text-3xl mb-2">📋</div>
+                <div className="font-semibold text-sm">{item.title}</div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }

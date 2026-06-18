@@ -5,6 +5,7 @@ import ChapterPage from './pages/ChapterPage';
 import QuizPage from './pages/QuizPage';
 import TrophyPage from './pages/TrophyPage';
 import SettingsPage from './pages/SettingsPage';
+import UjianPage from './pages/UjianPage';
 import Sidebar from './components/Sidebar';
 
 function Layout() {
@@ -22,6 +23,7 @@ function Layout() {
           <Route path="/quiz/:courseId/:chapterId" element={<QuizPage />} />
           <Route path="/trophy" element={<TrophyPage />} />
           <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/course/:courseId/ujian/:ujianId" element={<UjianPage />} />
         </Routes>
       </div>
     </div>
