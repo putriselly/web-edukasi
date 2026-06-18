@@ -33,7 +33,6 @@ export default function ChapterPage() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-white flex">
-      {/* Sidebar */}
       <div className="w-72 bg-gray-900 p-6 flex flex-col gap-3 overflow-y-auto">
         <button
           onClick={() => navigate(`/course/${courseId}`)}
@@ -68,9 +67,7 @@ export default function ChapterPage() {
         })}
       </div>
 
-      {/* Main Content */}
       <div className="flex-1 p-8 overflow-y-auto">
-        {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div>
             <p className="text-gray-400 text-sm">Bab {chapterIndex + 1}</p>
@@ -103,7 +100,6 @@ export default function ChapterPage() {
           </div>
         </div>
 
-        {/* Tabs */}
         <div className="flex gap-4 border-b border-gray-800 mb-6">
           {tabs.map(tab => (
             <button
@@ -119,7 +115,6 @@ export default function ChapterPage() {
           ))}
         </div>
 
-        {/* Tab Content */}
         {activeTab === 'materi' && (
           <div className="bg-gray-800 rounded-2xl p-6">
             {chapter.pdfUrl ? (
@@ -128,7 +123,12 @@ export default function ChapterPage() {
                 className="w-full h-[600px] rounded-xl"
                 title="Materi PDF"
               />
-            ) : (
+            ) : chapter.spada ? (
+                <div className="text-center text-gray-400 py-16">
+                  <div className="text-5xl mb-4">📖</div>
+                  <p>Materi untuk bab ini tersedia di SPADA UPI.</p>
+                </div>
+              ) : (
               <div className="text-center text-gray-400 py-16">
                 <div className="text-5xl mb-4">📄</div>
                 <p>Materi belum tersedia untuk bab ini.</p>

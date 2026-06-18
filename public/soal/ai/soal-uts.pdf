@@ -1,0 +1,204 @@
+UTS ARTIFICIAL INTELLIGENCE
+Cakupan Materi: Bab 1 – Bab 5
+ 
+⸻
+ 
+Pilihan Ganda
+1.
+Menurut definisi umum, Artificial Intelligence adalah …
+A. Sistem yang hanya dapat menyimpan data B. Kemampuan mesin untuk meniru kecerdasan manusia C. Bahasa pemrograman tingkat tinggi D. Sistem operasi komputer
+ 
+⸻
+ 
+2.
+Tokoh yang dikenal sebagai “Father of AI” adalah …
+A. Alan Turing B. Geoffrey Hinton C. John McCarthy D. Marvin Minsky
+ 
+⸻
+ 
+3.
+Tujuan utama Turing Test adalah …
+A. Mengukur kecepatan komputer B. Menguji kecerdasan mesin melalui percakapan C. Menguji kapasitas penyimpanan data D. Mengukur performa jaringan
+ 
+⸻
+ 
+4.
+Sebuah agent yang mengetahui seluruh kondisi lingkungan termasuk ke dalam lingkungan …
+A. Dynamic B. Partially Observable C. Fully Observable D. Stochastic
+ 
+⸻
+ 
+5.
+Komponen yang menentukan tindakan agent disebut …
+A. Percept B. Environment C. Agent Function D. Sensor
+ 
+⸻
+ 
+6.
+Pada Breadth First Search (BFS), node dieksplorasi berdasarkan …
+A. Bobot terbesar B. Kedalaman terdalam terlebih dahulu C. Urutan tingkat (level) D. Nilai heuristic
+ 
+⸻
+ 
+7.
+Kelebihan utama BFS adalah …
+A. Selalu membutuhkan memori kecil B. Menjamin solusi terpendek pada graph tak berbobot C. Tidak memerlukan queue D. Lebih cepat dari semua algoritma lain
+ 
+⸻
+ 
+8.
+DFS lebih cocok digunakan ketika …
+A. Solusi diperkirakan berada jauh di dalam pohon pencarian B. Dibutuhkan solusi optimal C. Memori sangat besar tersedia D. Semua jawaban salah
+ 
+⸻
+ 
+9.
+Uniform Cost Search memilih node berdasarkan …
+A. Kedalaman node B. Heuristic terbesar C. Biaya jalur terkecil D. Jumlah anak node
+ 
+⸻
+ 
+10.
+Fungsi evaluasi pada A* Search adalah …
+A. f(n)=g(n)-h(n) B. f(n)=g(n)+h(n) C. f(n)=g(n)×h(n) D. f(n)=h(n)-g(n)
+ 
+⸻
+ 
+11.
+Heuristic yang baik seharusnya …
+A. Selalu lebih besar dari biaya sebenarnya B. Mendekati biaya sebenarnya menuju tujuan C. Acak D. Tidak berubah
+ 
+⸻
+ 
+12.
+Constraint Satisfaction Problem terdiri dari …
+A. Data, Rule, Program B. Input, Output, Process C. Variable, Domain, Constraint D. Agent, Sensor, Environment
+ 
+⸻
+ 
+13.
+Metode dasar penyelesaian CSP adalah …
+A. Quick Sort B. Generate and Test C. Merge Sort D. Dynamic Programming
+ 
+⸻
+ 
+14.
+Forward Checking digunakan untuk …
+A. Menghapus node pada graph B. Mengurangi domain yang tidak mungkin digunakan C. Menambah constraint baru D. Menghapus variabel
+ 
+⸻
+ 
+15.
+MRV memilih variabel yang memiliki …
+A. Domain terbesar B. Constraint paling sedikit C. Domain paling kecil D. Nilai terbesar
+ 
+⸻
+ 
+16.
+Degree Heuristic memilih variabel dengan …
+A. Domain terbesar B. Constraint terbanyak C. Nilai minimum D. Bobot terkecil
+ 
+⸻
+ 
+17.
+Knowledge Representation digunakan untuk …
+A. Menyimpan pengetahuan agar dapat diproses komputer B. Menghapus data C. Menyimpan gambar D. Membuat jaringan
+ 
+⸻
+ 
+18.
+Pengetahuan mengenai cara melakukan sesuatu disebut …
+A. Declarative Knowledge B. Meta Knowledge C. Procedural Knowledge D. Heuristic Search
+ 
+⸻
+ 
+19.
+Pada Predicate Logic, simbol ∀ berarti …
+A. Ada setidaknya satu B. Tidak ada C. Untuk semua D. Jika-maka
+ 
+⸻
+ 
+20.
+Semantic Network merepresentasikan pengetahuan menggunakan …
+A. Queue B. Array C. Graf D. Stack
+ 
+⸻
+ 
+Essay
+1.
+Jelaskan pengertian Artificial Intelligence beserta tujuan utamanya!
+ 
+⸻
+ 
+2.
+Jelaskan konsep Agent, Environment, dan Rational Agent!
+ 
+⸻
+ 
+3.
+Bandingkan BFS dan DFS dari segi cara kerja, kelebihan, dan kekurangan!
+ 
+⸻
+ 
+4.
+Jelaskan cara kerja Uniform Cost Search dan kapan digunakan!
+ 
+⸻
+ 
+5.
+Mengapa A* Search dianggap lebih efektif dibandingkan BFS dan DFS pada banyak kasus?
+ 
+⸻
+ 
+6.
+Jelaskan komponen utama Constraint Satisfaction Problem!
+ 
+⸻
+ 
+7.
+Bandingkan Backtracking, Forward Checking, dan Constraint Propagation!
+ 
+⸻
+ 
+8.
+Jelaskan perbedaan Declarative Knowledge, Procedural Knowledge, dan Heuristic Knowledge!
+ 
+⸻
+ 
+9.
+Bandingkan Propositional Logic dan Predicate Logic!
+ 
+⸻
+ 
+10.
+Analisis mengapa Knowledge Representation menjadi fondasi penting dalam pengembangan sistem AI.
+ 
+⸻
+ 
+Kunci Jawaban Pilihan Ganda UTS
+No	Jawaban
+1	B
+2	C
+3	B
+4	C
+5	C
+6	C
+7	B
+8	A
+9	C
+10	B
+11	B
+12	C
+13	B
+14	B
+15	C
+16	B
+17	A
+18	C
+19	C
+20	C
+ 
+⸻
+ 
+✅ UTS selesai (Bab 1–5).
+➡️ Selanjutnya tinggal UAS Artificial Intelligence (Bab 6–10) yang biasanya menjadi ujian paling komprehensif dan tingkat kesulitannya lebih tinggi daripada kuis maupun UTS.

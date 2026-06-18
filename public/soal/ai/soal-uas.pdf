@@ -1,0 +1,201 @@
+UAS ARTIFICIAL INTELLIGENCE
+Cakupan Materi: Bab 6 – Bab 10
+ 
+⸻
+ 
+Pilihan Ganda
+1.
+Reasoning dalam AI adalah proses …
+A. Menyimpan data ke database B. Menarik kesimpulan berdasarkan fakta dan pengetahuan yang tersedia C. Menghapus data yang tidak diperlukan D. Mengubah gambar menjadi teks
+ 
+⸻
+ 
+2.
+Inference Engine pada sistem AI berfungsi untuk …
+A. Menyimpan data pengguna B. Menjalankan proses penalaran menggunakan fakta dan aturan C. Membuat antarmuka pengguna D. Menghubungkan komputer ke internet
+ 
+⸻
+ 
+3.
+Pernyataan berikut yang merupakan contoh Deductive Reasoning adalah …
+A. Sebagian besar burung bisa terbang sehingga semua burung bisa terbang B. Semua mahasiswa memiliki NIM, Budi adalah mahasiswa, maka Budi memiliki NIM C. Pasien demam sehingga kemungkinan terkena flu D. Harga saham naik tiga hari berturut-turut sehingga akan selalu naik
+ 
+⸻
+ 
+4.
+Forward Chaining disebut sebagai metode …
+A. Goal Driven B. Data Driven C. Random Driven D. User Driven
+ 
+⸻
+ 
+5.
+Backward Chaining dimulai dari …
+A. Fakta awal B. Data training C. Tujuan atau hipotesis D. Dataset
+ 
+⸻
+ 
+6.
+Metode yang mencari penyebab paling mungkin dari suatu kejadian disebut …
+A. Deductive Reasoning B. Inductive Reasoning C. Abductive Reasoning D. Logical Resolution
+ 
+⸻
+ 
+7.
+Komponen utama yang menyimpan pengetahuan pada Expert System adalah …
+A. User Interface B. Knowledge Base C. Compiler D. Database Server
+ 
+⸻
+ 
+8.
+Knowledge Engineer bertugas untuk …
+A. Mengembangkan perangkat keras B. Mengubah pengetahuan pakar menjadi bentuk yang dapat digunakan komputer C. Menjual perangkat lunak D. Mengelola jaringan
+ 
+⸻
+ 
+9.
+MYCIN merupakan contoh …
+A. Sistem operasi B. Search Algorithm C. Expert System D. Neural Network
+ 
+⸻
+ 
+10.
+Artificial Neural Network terinspirasi dari …
+A. Sistem operasi komputer B. Struktur jaringan internet C. Cara kerja neuron pada otak manusia D. Database relasional
+ 
+⸻
+ 
+11.
+Lapisan yang menghasilkan prediksi pada ANN disebut …
+A. Input Layer B. Hidden Layer C. Output Layer D. Bias Layer
+ 
+⸻
+ 
+12.
+Fungsi aktivasi ReLU didefinisikan sebagai …
+A. x² B. max(0,x) C. 1/x D. x+1
+ 
+⸻
+ 
+13.
+Tujuan utama Backpropagation adalah …
+A. Menambah data training B. Memperbarui bobot untuk meminimalkan error C. Menghapus neuron D. Mengurangi jumlah layer
+ 
+⸻
+ 
+14.
+Jika model memiliki performa sangat baik pada data training tetapi buruk pada data testing, maka terjadi …
+A. Underfitting B. Overfitting C. Clustering D. Sampling
+ 
+⸻
+ 
+15.
+Tokenization dalam NLP adalah proses …
+A. Menghapus gambar B. Memecah teks menjadi unit-unit kecil seperti kata C. Mengubah suara menjadi teks D. Menghapus stopword
+ 
+⸻
+ 
+16.
+Teknik NLP yang digunakan untuk mengenali nama orang, lokasi, atau organisasi adalah …
+A. Stemming B. Tokenization C. Named Entity Recognition D. Parsing
+ 
+⸻
+ 
+17.
+CNN paling banyak digunakan pada bidang …
+A. Database Management B. Computer Vision C. Operating System D. Networking
+ 
+⸻
+ 
+18.
+OCR digunakan untuk …
+A. Mengenali wajah B. Mendeteksi objek C. Mengubah teks pada gambar menjadi teks digital D. Menerjemahkan bahasa
+ 
+⸻
+ 
+19.
+Generative AI adalah AI yang mampu …
+A. Menyimpan data lebih cepat B. Menghasilkan konten baru berdasarkan pola yang dipelajari C. Menghapus data otomatis D. Menggantikan seluruh pekerjaan manusia
+ 
+⸻
+ 
+20.
+Prinsip AI yang menekankan bahwa sistem harus dapat dijelaskan kepada manusia disebut …
+A. Fairness B. Privacy C. Transparency D. Accountability
+ 
+⸻
+ 
+Essay
+1.
+Jelaskan perbedaan Deductive, Inductive, dan Abductive Reasoning disertai contoh masing-masing!
+ 
+⸻
+ 
+2.
+Bandingkan Forward Chaining dan Backward Chaining dari segi cara kerja, kelebihan, dan penggunaannya!
+ 
+⸻
+ 
+3.
+Jelaskan komponen-komponen utama Expert System dan fungsi masing-masing!
+ 
+⸻
+ 
+4.
+Bagaimana proses akuisisi pengetahuan (Knowledge Acquisition) dilakukan dalam pengembangan Expert System?
+ 
+⸻
+ 
+5.
+Jelaskan struktur dasar Artificial Neural Network beserta fungsi setiap layer!
+ 
+⸻
+ 
+6.
+Apa peran Weight, Bias, dan Activation Function dalam ANN?
+ 
+⸻
+ 
+7.
+Jelaskan konsep Overfitting dan Underfitting serta cara mengatasinya!
+ 
+⸻
+ 
+8.
+Bandingkan NLP dan Computer Vision serta berikan contoh penerapannya!
+ 
+⸻
+ 
+9.
+Apa yang dimaksud dengan Generative AI, Large Language Model (LLM), dan Multimodal AI?
+ 
+⸻
+ 
+10.
+Analisis dampak positif dan negatif perkembangan AI terhadap masyarakat serta pentingnya etika AI dalam pengembangan teknologi masa depan!
+ 
+⸻
+ 
+Kunci Jawaban Pilihan Ganda UAS
+No	Jawaban
+1	B
+2	B
+3	B
+4	B
+5	C
+6	C
+7	B
+8	B
+9	C
+10	C
+11	C
+12	B
+13	B
+14	B
+15	B
+16	C
+17	B
+18	C
+19	B
+20	C
+ 
+
